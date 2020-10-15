@@ -4,7 +4,8 @@
   "description": "expresso repositories",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "node test.js",
+    "publish": "npm publish"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/expresso-app/expresso-repositories/issues"
   },
-  "homepage": "https://github.com/expresso-app/expresso-repositories#readme"
+  "homepage": "https://github.com/expresso-app/expresso-repositories#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "expresso-models": "^1.0.0",
+    "mongoose": "^5.10.9"
+  }
 }
