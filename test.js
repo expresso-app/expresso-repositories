@@ -23,9 +23,13 @@ mongoose.connect(connectionString, {
 
 
 async function test() {
-    const { tagRepository } = require('./index');
-    const tags = await tagRepository.getAll();
-    console.log(tags);
+    const { tagRepository, userRepository } = require('./index');
+
+    // const tags = await tagRepository.getAll();
+    // console.log(tags);
+
+    const admin = await userRepository.getAdminByEmail("admin@expresso.com");
+    console.log(admin);
 }
 
 test();
