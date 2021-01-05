@@ -51,6 +51,15 @@ class RestaurantRepository extends Repository{
   async getCount() {
       return await Restaurant.countDocuments();
   }
+
+  async getBySlug(slug) {
+    try {
+      const restaurant = await Restaurant.findOne({ slug });
+      return restaurant;
+    } catch (err) {
+      throw new Error(err);
+    }
+  }
 }
 
 module.exports = new RestaurantRepository();
