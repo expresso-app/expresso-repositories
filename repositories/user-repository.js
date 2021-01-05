@@ -29,6 +29,15 @@ class UserRepository extends Repository {
             throw new Error(err);
         }
     }
+
+    async getAdminByEmail(email) {
+        try {
+            const admin = await User.findOne({ email: email, role: 'admin' });
+            return admin;
+        } catch (err) {
+            throw new Error(err);
+        }
+    }
 }
 
 module.exports = new UserRepository();
