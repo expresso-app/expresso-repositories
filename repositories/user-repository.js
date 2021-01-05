@@ -20,20 +20,20 @@ class UserRepository extends Repository {
             throw new Error(err);
         }
     }
-
-    async getByFieldValue(fieldValue) {
+    
+    async getAdminByEmail(email) {
         try {
-            const user = await User.findOne(fieldValue);
-            return user;
+            const admin = await User.findOne({ email: email, role: 'admin' }).select("+password");
+            return admin;
         } catch (err) {
             throw new Error(err);
         }
     }
 
-    async getAdminByEmail(email) {
+    async getByFieldValue(fieldValue) {
         try {
-            const admin = await User.findOne({ email: email, role: 'admin' });
-            return admin;
+            const user = await User.findOne(fieldValue);
+            return user;
         } catch (err) {
             throw new Error(err);
         }
