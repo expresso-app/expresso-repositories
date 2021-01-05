@@ -9,8 +9,8 @@ class BranchRepository extends Repository{
 
   async getByRestaurantId(restaurantId) {
     try {
-      const cities = await Branch.find({ "restaurant.id": restaurantId });
-      return cities;
+      const branches = await Branch.find({ "restaurant.id": restaurantId });
+      return branches;
     }
     catch(err) {
       throw new Error(err);
@@ -23,6 +23,19 @@ class BranchRepository extends Repository{
         path: field,
         select: "-__v"
       });
+      return branch;
+    } catch (err) {
+      throw new Error(err);
+    }
+  }
+
+  async getBySlug(restaurantId ,slug) {
+    try {
+      const restaurantBranches = await this.getByRestaurantId(restaurantId);
+      if(!restaurantBranches || !restaurantBranches.length === 0) return null;
+      // console.log(restaurantBranches);
+
+      const branch = restaurantBranches.find(b => b.slug === slug);
       return branch;
     } catch (err) {
       throw new Error(err);

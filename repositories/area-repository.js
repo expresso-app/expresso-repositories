@@ -16,6 +16,15 @@ class AreaRepository extends Repository {
       throw new Error(err);
     }
   }
+
+  async getBySlug(slug) {
+    try {
+      const area = await Area.findOne({ slug });
+      return area;
+    } catch (err) {
+      throw new Error(err);
+    }
+  }
 }
 
 module.exports = new AreaRepository();
