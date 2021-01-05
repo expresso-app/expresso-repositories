@@ -35,6 +35,9 @@ async function test() {
 
     // const branch = await branchRepository.getBySlug("b2165acd-4148-47b8-a60f-ab12e8296547", "heliopolis");
     // console.log(branch);
+
+    const admin = await userRepository.getByFieldValue({ id: "5423777d-2fa8-43a8-b6cb-6f5e067ac451" });
+    console.log(admin);
 }
 
 test();

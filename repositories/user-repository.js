@@ -32,7 +32,7 @@ class UserRepository extends Repository {
 
     async getByFieldValue(fieldValue) {
         try {
-            const user = await User.findOne(fieldValue);
+            const user = await User.findOne(fieldValue).select("+password");
             return user;
         } catch (err) {
             throw new Error(err);
