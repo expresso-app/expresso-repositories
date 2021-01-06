@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-const { Branch } = require("expresso-models");
+const { Branch, Restaurant } = require("expresso-models");
 const Repository = require("./repository");
 
 class BranchRepository extends Repository{
@@ -9,8 +9,10 @@ class BranchRepository extends Repository{
 
   async getByRestaurantId(restaurantId) {
     try {
-      const branches = await Branch.find({ "restaurant.id": restaurantId });
-      return branches;
+      // const branches = await Branch.find({ "restaurant.id": restaurantId });
+      const restaurant = await Restaurant.findOne({ id: restaurantId });
+      const restaurantBranches = await Branch.find({ restaurant: restaurant._id });
+      return restaurantBranches;
     }
     catch(err) {
       throw new Error(err);
@@ -32,9 +34,6 @@ class BranchRepository extends Repository{
   async getBySlug(restaurantId ,slug) {
     try {
       const restaurantBranches = await this.getByRestaurantId(restaurantId);
-      if(!restaurantBranches || !restaurantBranches.length === 0) return null;
-      // console.log(restaurantBranches);
-
       const branch = restaurantBranches.find(b => b.slug === slug);
       return branch;
     } catch (err) {
