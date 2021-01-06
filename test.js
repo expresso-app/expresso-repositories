@@ -33,11 +33,14 @@ async function test() {
     // const admin = await userRepository.getAdminByEmail("admin@expresso.com");
     // console.log(admin);
 
-    // const branch = await branchRepository.getBySlug("b2165acd-4148-47b8-a60f-ab12e8296547", "heliopolis");
-    // console.log(branch);
+    const branch = await branchRepository.getBySlug("b2165acd-4148-47b8-a60f-ab12e8296547", "heliopolis");
+    console.log(branch);
 
-    const admin = await userRepository.getByFieldValue({ id: "5423777d-2fa8-43a8-b6cb-6f5e067ac451" });
-    console.log(admin);
+    // const admin = await userRepository.getByFieldValue({ id: "5423777d-2fa8-43a8-b6cb-6f5e067ac451" });
+    // console.log(admin);
+
+    // const restaurantBranches = await branchRepository.getByRestaurantId("b2165acd-4148-47b8-a60f-ab12e8296547");
+    // console.log(restaurantBranches);
 }
 
 test();
