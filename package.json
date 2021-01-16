@@ -1,6 +1,6 @@
 {
   "name": "expresso-repositories",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "expresso repositories",
   "main": "index.js",
   "scripts": {
@@ -20,7 +20,7 @@
   "homepage": "https://github.com/expresso-app/expresso-repositories#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "expresso-models": "^2.0.0",
+    "expresso-models": "^2.1.1",
     "mongoose": "^5.10.9"
   }
 }
