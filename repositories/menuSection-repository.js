@@ -6,6 +6,10 @@ class MenuSectionRepository extends Repository {
     constructor() {
       super(MenuSection);
     }
+
+    async addMenuItem(menuSectionId, menuItem) {
+      return null;
+    }
 }
 
 module.exports = new MenuSectionRepository();    

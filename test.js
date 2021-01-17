@@ -47,13 +47,14 @@ async function test() {
 
     /* 
         restaurantId: 18dcf16f-1ea1-4c75-858a-dca79a801fed 
-        menuId: c51d37b9-0305-495d-a227-b07f88b3d911
-        menuSectionId: 10f235c2-b250-408c-ba5b-8109fe15b2cc
-        menuItemId: 33d6f72f-c2f0-4442-8712-6027ad136700
+                      ObjectId(6003498da230660f8c246e9b)
+        menuId: 
+        menuSectionId: 
+        menuItemId: 
     */
 
     // const menu = await menuRepository.create({
-    //     restaurant: "18dcf16f-1ea1-4c75-858a-dca79a801fed"
+    //     restaurant: "6003498da230660f8c246e9b"
     // });
     // console.log(menu);
 
@@ -62,17 +63,33 @@ async function test() {
 
     // const menuSection = await menuSectionRepository.create({
     //     name: "Main Course",
-    //     menu: "c51d37b9-0305-495d-a227-b07f88b3d911"
+    //     menu: "600451141e621e3288a0f5d2"
     // });
     // console.log(menuSection);
 
-    const menuItem = await menuItemRepository.create({
-        name: "Item 1",
-        price: 20,
-        description: "this is item 1",
-        menuSection: "10f235c2-b250-408c-ba5b-8109fe15b2cc"
-    });
-    console.log(menuItem);
+    // const menuItem = await menuItemRepository.create({
+    //     name: "Item 1",
+    //     price: 20,
+    //     description: "this is item 1",
+    //     menuSection: "600451577ff0973670d3c297"
+    // });
+    // console.log(menuItem);
+
+    // const menuItem = await menuItemRepository.update("33d6f72f-c2f0-4442-8712-6027ad136700", { 
+    //     price: 30,
+    //     options: [
+    //         {
+    //             name: "Bread Type",
+    //             type: "Required",
+    //             optionItems: [
+    //                 { name: "Regular", value: 0 },
+    //                 { name: "Extra", value: 3 },
+    //             ]
+    //         }
+    //     ]
+    // });
+
+    // console.log(menuItem);
 }
 
 test();
