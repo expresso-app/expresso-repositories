@@ -2,42 +2,20 @@
 const { Menu } = require("expresso-models");
 const Repository = require("./repository");
 
+const restaurantRepository = require("./restaurant-repository");
+
 class MenuRepository extends Repository {
   constructor() {
     super(Menu);
+
+    this.restaurantRepository = restaurantRepository;
   }
 
-  // async getStats() {
-  //   return await Menu.aggregate([
-  //     // { 
-  //     //   $match: { specialOffers: { $eq: true } }
-  //     // },
-  //     {
-  //       $group: {
-  //         _id: "$restaurant.rating",
-  //         num: { $sum: 1 },
-  //         maxRating: { $max: "$restaurant.rating" },
-  //         minRating: { $min: "$restaurant.rating" },
-  //         avgRating: { $avg: "$restaurant.rating" }
-  //       }
-  //     },
-  //     {
-  //       $sort: { maxRating: -1 }
-  //     }
-  //   ]);
-  // }
+  async getByRestaurantId(restaurantId) {
+    const restaurant = await this.restaurantRepository.getById(restaurantId);
 
-  // async getCount() {
-  //   return await Menu.countDocuments();
-  // }
-
-  async addMenuSection(menuId, menuSection) {
-
-    // 1. get menu object
-
-    
-
-    return null;
+    const menu = await Menu.findOne({ "restaurant": restaurant._id }); 
+    return menu;
   }
 
 }

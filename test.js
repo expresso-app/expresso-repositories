@@ -90,6 +90,11 @@ async function test() {
     // });
 
     // console.log(menuItem);
+
+    // const menu = await menuRepository.getById("2ee22881-3fb0-4c78-9c0e-0779391aada3");
+
+    const menu = await menuRepository.getByRestaurantId("ecf12be5-a5c0-4223-a467-0269cad0fc88");
+    console.log(menu);
 }
 
 test();
