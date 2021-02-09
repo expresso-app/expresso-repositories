@@ -11,6 +11,7 @@ const userRepository = require('./repositories/user-repository');
 const menuRepository = require('./repositories/menu-repository');
 const menuSectionRepository = require('./repositories/menuSection-repository');
 const menuItemRepository = require('./repositories/menuItem-repository');
+const menuItemOptionRepository = require('./repositories/menuItemOption-repository');
 
 module.exports = {
     Repository, QueryBuilder,
@@ -23,5 +24,6 @@ module.exports = {
     userRepository,
     menuRepository,
     menuSectionRepository,
-    menuItemRepository
+    menuItemRepository,
+    menuItemOptionRepository
 };

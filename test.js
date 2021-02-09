@@ -26,7 +26,7 @@ async function test() {
     const { tagRepository, userRepository, 
             countryRepository, cityRepository, areaRepository, 
             restaurantRepository, branchRepository,
-            menuRepository, menuSectionRepository, menuItemRepository } = require('./index');
+            menuRepository, menuSectionRepository, menuItemRepository, menuItemOptionRepository } = require('./index');
 
     // const tags = await tagRepository.getAll();
     // console.log(tags);
@@ -91,9 +91,25 @@ async function test() {
 
     // console.log(menuItem);
 
-    const section = await menuSectionRepository.getById("6d31af3f-9b0e-4079-88ed-f3a2be10e0bb");
-    console.log(section);
+    // const section = await menuSectionRepository.getById("6d31af3f-9b0e-4079-88ed-f3a2be10e0bb");
+    // console.log(section);
     
+    const menuItem = await menuItemRepository.getById("931a3fea-3864-4153-a87e-c54d6cff8010");
+    console.log(menuItem);
+
+    // const menuItemOption = await menuItemOptionRepository.create({
+    //     name: "Bread Type",
+    //     type: "Required",
+    //     optionItems: [
+    //         { name: "Thick", value: 10 },
+    //         { name: "Slim", value: 5 },
+    //     ],
+    //     menuItem: menuItem._id
+    // });
+
+    const menuItemOption = await menuItemOptionRepository.getById("e329ced8-3b17-4f0f-bad4-3a1fb32ad976");
+    // console.log(menuItemOption);
+
 }
 
 test();
