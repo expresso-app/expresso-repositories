@@ -91,10 +91,9 @@ async function test() {
 
     // console.log(menuItem);
 
-    // const menu = await menuRepository.getById("2ee22881-3fb0-4c78-9c0e-0779391aada3");
-
-    const menu = await menuRepository.getByRestaurantId("ecf12be5-a5c0-4223-a467-0269cad0fc88");
-    console.log(menu);
+    const section = await menuSectionRepository.getById("6d31af3f-9b0e-4079-88ed-f3a2be10e0bb");
+    console.log(section);
+    
 }
 
 test();
