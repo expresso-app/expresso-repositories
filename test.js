@@ -26,7 +26,7 @@ async function test() {
     const { tagRepository, userRepository, 
             countryRepository, cityRepository, areaRepository, 
             restaurantRepository, branchRepository,
-            menuRepository, menuSectionRepository, menuItemRepository, menuItemOptionRepository } = require('./index');
+            menuRepository, menuSectionRepository, menuItemRepository, menuItemOptionRepository, menuItemOptionItemRepository } = require('./index');
 
     // const tags = await tagRepository.getAll();
     // console.log(tags);
@@ -95,7 +95,7 @@ async function test() {
     // console.log(section);
     
     const menuItem = await menuItemRepository.getById("931a3fea-3864-4153-a87e-c54d6cff8010");
-    console.log(menuItem);
+    // console.log(menuItem);
 
     // const menuItemOption = await menuItemOptionRepository.create({
     //     name: "Bread Type",
@@ -107,9 +107,10 @@ async function test() {
     //     menuItem: menuItem._id
     // });
 
-    const menuItemOption = await menuItemOptionRepository.getById("e329ced8-3b17-4f0f-bad4-3a1fb32ad976");
+    const menuItemOption = await menuItemOptionRepository.getById("14a7ec3a-c91d-490c-a558-5e501c4e1438");
     // console.log(menuItemOption);
 
+    console.log(menuItemOptionItemRepository);
 }
 
 test();
