@@ -1,6 +1,6 @@
 {
   "name": "expresso-repositories",
-  "version": "2.5.2",
+  "version": "2.5.3",
   "description": "expresso repositories",
   "main": "index.js",
   "scripts": {
@@ -21,6 +21,6 @@
   "dependencies": {
     "dotenv": "^8.2.0",
     "expresso-models": "^2.4.2",
-    "mongoose": "^5.10.9"
+    "mongoose": "^5.11.16"
   }
 }
