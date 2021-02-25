@@ -25,7 +25,7 @@ mongoose.connect(connectionString, {
 async function test() {
     const { tagRepository, userRepository, 
             countryRepository, cityRepository, areaRepository, 
-            restaurantRepository, branchRepository,
+            categoryRepository, restaurantRepository, branchRepository,
             menuRepository, menuSectionRepository, menuItemRepository, menuItemOptionRepository, menuItemOptionItemRepository } = require('./index');
 
     // const tags = await tagRepository.getAll();
@@ -94,7 +94,7 @@ async function test() {
     // const section = await menuSectionRepository.getById("6d31af3f-9b0e-4079-88ed-f3a2be10e0bb");
     // console.log(section);
     
-    const menuItem = await menuItemRepository.getById("931a3fea-3864-4153-a87e-c54d6cff8010");
+    // const menuItem = await menuItemRepository.getById("931a3fea-3864-4153-a87e-c54d6cff8010");
     // console.log(menuItem);
 
     // const menuItemOption = await menuItemOptionRepository.create({
@@ -107,10 +107,10 @@ async function test() {
     //     menuItem: menuItem._id
     // });
 
-    const menuItemOption = await menuItemOptionRepository.getById("14a7ec3a-c91d-490c-a558-5e501c4e1438");
+    // const menuItemOption = await menuItemOptionRepository.getById("14a7ec3a-c91d-490c-a558-5e501c4e1438");
     // console.log(menuItemOption);
 
-    console.log(menuItemOptionItemRepository);
+    // const category = await categoryRepository.create({ name: "test categ" })
 }
 
 test();

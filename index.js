@@ -5,6 +5,7 @@ const areaRepository = require('./repositories/area-repository');
 const branchRepository = require('./repositories/branch-repository');
 const cityRepository = require('./repositories/city-repository');
 const countryRepository = require('./repositories/country-repository');
+const categoryRepository = require('./repositories/category-repository');
 const restaurantRepository = require('./repositories/restaurant-repository');
 const tagRepository = require('./repositories/tag-repository');
 const userRepository = require('./repositories/user-repository');
@@ -20,6 +21,7 @@ module.exports = {
     branchRepository,
     cityRepository,
     countryRepository,
+    categoryRepository,
     restaurantRepository,
     tagRepository,
     userRepository,
