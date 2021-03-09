@@ -26,7 +26,8 @@ async function test() {
     const { tagRepository, userRepository, 
             countryRepository, cityRepository, areaRepository, 
             categoryRepository, restaurantRepository, branchRepository,
-            menuRepository, menuSectionRepository, menuItemRepository, menuItemOptionRepository, menuItemOptionItemRepository } = require('./index');
+            menuRepository, menuSectionRepository, menuItemRepository, menuItemOptionRepository, menuItemOptionItemRepository,
+            orderRepository, orderItemRepository } = require('./index');
 
     // const tags = await tagRepository.getAll();
     // console.log(tags);
@@ -110,7 +111,22 @@ async function test() {
     // const menuItemOption = await menuItemOptionRepository.getById("14a7ec3a-c91d-490c-a558-5e501c4e1438");
     // console.log(menuItemOption);
 
-    // const category = await categoryRepository.create({ name: "test categ" })
+    // const category = await categoryRepository.create({ name: "test categ" });
+
+    const userId = "1f227f4b-0778-4e2a-b11b-8846c0d7dc8c";
+    // const order = await orderRepository.create({
+    //     user: userId
+    // });
+    // console.log(order);
+
+    const orderId = "0546f8c0-749b-485e-b1e5-6facf9b4fd8d";
+    const menuItemId = "1bc84e76-1aec-494a-a2ee-b77482b43a55";
+    // const orderItem = await orderItemRepository.create({
+    //     order: orderId,
+    //     menuItem: menuItemId,
+    //     quantity: 4
+    // });
+    // console.log(orderItem);
 }
 
 test();
