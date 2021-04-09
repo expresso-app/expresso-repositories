@@ -9,6 +9,7 @@ const categoryRepository = require('./repositories/category-repository');
 const restaurantRepository = require('./repositories/restaurant-repository');
 const tagRepository = require('./repositories/tag-repository');
 const userRepository = require('./repositories/user-repository');
+const addressRepository = require('./repositories/address-repository');
 const menuRepository = require('./repositories/menu-repository');
 const menuSectionRepository = require('./repositories/menuSection-repository');
 const menuItemRepository = require('./repositories/menuItem-repository');
@@ -27,6 +28,7 @@ module.exports = {
     restaurantRepository,
     tagRepository,
     userRepository,
+    addressRepository,
     menuRepository,
     menuSectionRepository,
     menuItemRepository,

@@ -23,7 +23,7 @@ mongoose.connect(connectionString, {
 
 
 async function test() {
-    const { tagRepository, userRepository, 
+    const { tagRepository, userRepository, addressRepository,
             countryRepository, cityRepository, areaRepository, 
             categoryRepository, restaurantRepository, branchRepository,
             menuRepository, menuSectionRepository, menuItemRepository, menuItemOptionRepository, menuItemOptionItemRepository,
