@@ -1,6 +1,6 @@
 {
   "name": "expresso-repositories",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "expresso repositories",
   "main": "index.js",
   "scripts": {
