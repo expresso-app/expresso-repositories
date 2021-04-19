@@ -20,7 +20,7 @@
   "homepage": "https://github.com/expresso-app/expresso-repositories#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "expresso-models": "^3.0.0",
+    "expresso-models": "^4.0.0",
     "mongoose": "^5.11.16"
   }
 }
